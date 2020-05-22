@@ -15,6 +15,7 @@ public class MadLibs {
         //ask for a number
         System.out.println("Please give me a number");
         int number = scanner.nextInt();
+        scanner.close();
 
         //output
         System.out.println("On a "+season+" day, I drink a minimum of "+number+ " cups of coffee");
