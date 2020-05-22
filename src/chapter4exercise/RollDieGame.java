@@ -7,13 +7,14 @@ public class RollDieGame {
     public static void main(String args[]) {
 
         int squareNow = 0;
-        int totalSquares = 20;
         int squaresLeft = 20;
+        int totalSqaures = 20;
+        int rollTimes = 5;
 
         //Roll die
         Random random = new Random();
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < rollTimes; i++) {
             int die = random.nextInt(6) + 1;
             System.out.println("You rolled a " + die);
 
@@ -21,17 +22,22 @@ public class RollDieGame {
             squareNow = squareNow + die;
             squaresLeft = squaresLeft - die;
 
-            if(squareNow<20) {
+
+            if (squareNow<totalSqaures && i==(rollTimes-1))
+                System.out.println("You lose!");
+
+            else if(squareNow<totalSqaures && i<rollTimes) {
                 System.out.println("You are now on square " + squareNow + " and there are " + squaresLeft + " left");
             }
-            else if(squareNow ==20){
+            else if(squareNow ==totalSqaures){
                 System.out.println("You win!");
                 break;
             }
-            else if (squareNow>20) {
+            else if (squareNow>totalSqaures) {
                 System.out.println("You lose!");
                 break;
             }
+
         }
     }
 }
