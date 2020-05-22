@@ -57,11 +57,11 @@ public class ChangeForADollaraGame {
         }
         else if (total<dollar){
             double amountShort = dollar - total;
-            System.out.println("Sorry. You were "+amountShort+" cents short");
+            System.out.println("Sorry. You were "+ String.format("%.2f",amountShort)+" cents short");
         }
         else if(total>dollar){
             double amountHigh = total - dollar;
-            System.out.println("Sorry. You were "+amountHigh+" cents high");
+            System.out.println("Sorry. You were "+ String.format("%.2f",amountHigh)+" cents high");
         }
     }
 }
