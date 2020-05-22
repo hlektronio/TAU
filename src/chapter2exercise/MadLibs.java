@@ -18,5 +18,6 @@ public class MadLibs {
 
         //output
         System.out.println("On a "+season+" day, I drink a minimum of "+number+ " cups of coffee");
+
     }
 }
