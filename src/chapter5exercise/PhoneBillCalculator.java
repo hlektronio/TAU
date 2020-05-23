@@ -17,7 +17,7 @@ public class PhoneBillCalculator {
         System.out.println("Enter base cost of the plan:");
         planFee = scanner.nextDouble();
 
-        System.out.println("Enter overge minutes:");
+        System.out.println("Enter overage minutes:");
         double min = scanner.nextDouble();
 
         scanner.close();
