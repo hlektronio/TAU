@@ -3,13 +3,12 @@ package chapter5exercise;
 import java.util.Scanner;
 
 public class PhoneBillCalculator {
-    static double planFee;
-    static double costPerMinute = .25;
-    static double min;
-    static double overage;
-    static double tax;
-    static double total;
-    static double subtotal;
+    private static double planFee;
+    private static final double costPerMinute = .25;
+    private static double overage;
+    private static double tax;
+    private static double total;
+    private static double subtotal;
 
 
     public static void main(String args[]){
@@ -19,7 +18,7 @@ public class PhoneBillCalculator {
         planFee = scanner.nextDouble();
 
         System.out.println("Enter overge minutes:");
-        min = scanner.nextDouble();
+        double min = scanner.nextDouble();
 
         scanner.close();
 
@@ -33,13 +32,13 @@ public class PhoneBillCalculator {
         System.out.println("Total: $" + String.format("%.2f",total));
     }
 
-    public static double calculateTax(){
+    private static double calculateTax(){
         subtotal = planFee + overage;
         tax = ((subtotal)*15)/100;
         return tax;
      }
 
-     public static double calculateTotal(){
+     private static double calculateTotal(){
         total = subtotal + tax;
         return total;
      }
