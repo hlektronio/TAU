@@ -11,6 +11,7 @@ public class RollDieGame {
         int totalSqaures = 20;
         int rollTimes = 5;
 
+
         //Roll die
         Random random = new Random();
 
