@@ -21,6 +21,8 @@ public class PhoneBillCalculator {
         System.out.println("Enter overge minutes:");
         min = scanner.nextDouble();
 
+        scanner.close();
+
         System.out.println("Phone Bill Statement");
         System.out.println("Plan: $" + planFee);
         overage = min * costPerMinute;
