@@ -1,6 +1,6 @@
 package chapter6exercise;
 
-public class PrintPhoneBill {
+public class PhoneBillCalculator {
 
     public static void main (String args[]){
 
