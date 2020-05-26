@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class PasswordValidator {
 
-    static String password;
-    static String username;
-    static String oldPassword;
-    static boolean isValid;
+    private static String password;
+    private static String username;
+    private static String oldPassword;
+    private static boolean isValid;
 
-    static Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String args[]) {
 
@@ -29,9 +29,11 @@ public class PasswordValidator {
         if (isValid) {
             System.out.println("Success!");
         }
+
+        scanner.close();
     }
 
-    public static boolean checkNewPassword() {
+    private static boolean checkNewPassword() {
 
         if (password.length() < 8) {
             System.out.println("*Your password should be at least 8 characters long.");
